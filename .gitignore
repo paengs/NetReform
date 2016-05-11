@@ -1,0 +1,9 @@
+# Compiled python
+*.pyc
+# IPython notebook checkpoints
+.ipynb_checkpoints
+
+# Editor temporaries
+*.swp
+*~
+
