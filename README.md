@@ -1,5 +1,5 @@
 # NetReform
-  - NetReform is a tensorflow wrapper for knowledge transfer. It is based on two papers; [Net2Net](http://arxiv.org/abs/1511.05641) and [Network Morphism](http://arxiv.org/abs/1603.01670).
+NetReform is a tensorflow wrapper for knowledge transfer. It is based on two papers; [Net2Net](http://arxiv.org/abs/1511.05641) and [Network Morphism](http://arxiv.org/abs/1603.01670).
 
 ## Dependencies
   - tensorflow
@@ -8,14 +8,17 @@
   - scipy
 
 ## Usage
-  - See example.py
+  - See [example.py](https://github.com/paengs/NetReform/blob/master/example.py)
 
     ```python
     from net_reform import NetReform
     # model, weights from a previous model
     nr = NetReform(model, weights, new_graph)
-    # network reformation with random values
-    out_graph = nr.reform()
+    out_graph, out_session = nr.reform_rand() # NetReform with random values
+    out_graph, out_session = nr.reform() # NetReform with values derived from net2net or netmorph func.
+    ...
+    obj = out_graph.get_collection('objective')[0]
+    out_session.run(obj)
     ```
 
 ## Notes
