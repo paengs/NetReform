@@ -3,7 +3,7 @@
 
 ## Dependencies
   - tensorflow
-  - slim
+  - [slim](https://github.com/paengs/NetReform/tree/master/slim) (modified ver.)
   - numpy
   - scipy
 
